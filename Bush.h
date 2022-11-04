@@ -1,12 +1,16 @@
 #pragma once
-#include <iostream>
+#pragma once
+#include "Plant.h"
 #include <fstream>
 using namespace std;
-enum month { January, February, March, April, May, June, July, August, September, October, November, December };
-struct bush_plant {
-	string name = "";
-	month blossom;
+
+class bush : public Plant {
+    string name;
+    enum month { January, February, March, April, May, June, July, August, September, October, November, December };
+    month blossom;
+public:
+    void In_Data(ifstream& ifst);
+    void Out_Data(ofstream& ofst);
+    int CountLetters();
+    bush() {};
 };
-void InBush(ifstream& ifst, bush_plant& a);
-void OutBush(ofstream& ofst, bush_plant& a);
-int CountLettersBush(ofstream& ofst, bush_plant& a);

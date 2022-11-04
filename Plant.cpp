@@ -1,51 +1,27 @@
 #include "Plant.h"
-using namespace std;
+#include "Tree.h"
+#include "Bush.h"
 
-plant* InPlant(ifstream& ifst) {
-	plant* pt = new plant;
-	tree_plant* f;
-	bush_plant* a;
-	int k = 0;
-	ifst >> k;
-	switch (k) {
-	case 1:
-		pt->key = tree;
-		f = new tree_plant;
-		InTree(ifst, *f);
-		pt->obj = (void*)f;
-		break;
-	case 2:
-		pt->key = bush;
-		a = new bush_plant;
-		InBush(ifst, *a);
-		pt->obj = (void*)a;
-		break;
-	default:
-		return 0;
-	}
-	tree_plant px;
-
-	if (pt->key == tree) {
-		px = *(tree_plant*)pt->obj;
-
-	}
-	return pt;
+Plant* Plant::In(ifstream& ifst) {
+    Plant* pt;
+    int k;
+    ifst >> k;
+    if (k == 1)
+    {
+        pt = new tree;
+    }
+    else if (k == 2)
+    {
+        pt = new bush;
+    }
+    else
+    {
+        return 0;
+    }
+    pt->In_Data(ifst);
+    return pt;
 }
-
-//int countLetters(plant& pt)
-//{
-//	int count = 0;
-//	switch (pt.key) {
-//	case 1:
-//		count = countLettersB(pt);
-//		break;
-//	case 2:
-//		pt->key = bush;
-//		a = new bush_plant;
-//		InBush(ifst, *a);
-//		pt->obj = (void*)a;
-//		break;
-//	default:
-//		return 0;
-//	}
-//}
+bool Plant::Compare(Plant& p)
+{
+    return CountLetters() < p.CountLetters();
+}

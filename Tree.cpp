@@ -1,22 +1,19 @@
-#include "Tree.h"
-using namespace std;
+#include  "Tree.h"
 
-void InTree(ifstream& ifst, tree_plant& f) {
-	ifst >> f.name;
-	ifst >> f.age;
+void tree::In_Data(ifstream& ifst) {
+    ifst >> name;
+    ifst >> age;
 }
-
-void OutTree(ofstream& ofst, tree_plant& f) {
-	ofst << "Name: " << f.name << endl;
-	ofst << "It is a tree. It's age is " << f.age << " days." << endl;
+void tree::Out_Data(ofstream& ofst) {
+    ofst << "Name: " << name << endl;
+    ofst << "It is a tree. It's age is " << age << " days." << endl;
 }
-int CountLettersTree(ofstream& ofst, tree_plant& f) {
-	int cnt = 0;
+int tree::CountLetters() {
 	string letters = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ";
-	for (int i = 0; i < f.name.length(); i++)
+	int cnt = 0;
+	for (int i = 0; i < name.length(); i++)
 	{
-		if (letters.find(f.name[i]) < letters.length())cnt++;
+		if (letters.find(name[i]) < letters.length())cnt++;
 	}
-	ofst << "count of consonants: " << cnt << endl;
 	return cnt;
 }

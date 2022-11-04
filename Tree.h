@@ -1,12 +1,14 @@
 #pragma once
-#include <iostream>
+#include "Plant.h"
 #include <fstream>
 using namespace std;
 
-struct tree_plant {
-	string name = "";
-	long age = 0;
+class tree : public Plant {
+    string name;
+    long age;
+public:
+    void In_Data(ifstream& ifst);
+    void Out_Data(ofstream& ofst);
+    int CountLetters();
+    tree() {};
 };
-void InTree(ifstream& ifst, tree_plant& f);
-void OutTree(ofstream& ofst, tree_plant& f);
-int CountLettersTree(ofstream& ofst, tree_plant& f);

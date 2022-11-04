@@ -1,54 +1,52 @@
 #include "Bush.h"
-using namespace std;
-
-void InBush(ifstream& ifst, bush_plant& a) {
-	ifst >> a.name;
+void bush::In_Data(ifstream& ifst) {
+    ifst >> name;
 	int t;
 	ifst >> t;
 	switch (t)
 	{
 	case 1:
-		a.blossom = January;
+		blossom = January;
 		break;
 	case 2:
-		a.blossom = February;
+		blossom = February;
 		break;
 	case 3:
-		a.blossom = March;
+		blossom = March;
 		break;
 	case 4:
-		a.blossom = April;
+		blossom = April;
 		break;
 	case 5:
-		a.blossom = May;
+		blossom = May;
 		break;
 	case 6:
-		a.blossom = June;
+		blossom = June;
 		break;
 	case 7:
-		a.blossom = July;
+		blossom = July;
 		break;
 	case 8:
-		a.blossom = August;
+		blossom = August;
 		break;
 	case 9:
-		a.blossom = September;
+		blossom = September;
 		break;
 	case 10:
-		a.blossom = October;
+		blossom = October;
 		break;
 	case 11:
-		a.blossom = November;
+		blossom = November;
 		break;
 	case 12:
-		a.blossom = December;
+		blossom = December;
 		break;
 	}
 }
 
-void OutBush(ofstream& ofst, bush_plant& a) {
-	ofst << "Name: " << a.name << endl;
-	switch (a.blossom)
+void bush::Out_Data(ofstream& ofst) {
+	ofst << "Name: " << name << endl;
+	switch (blossom)
 	{
 	case 0:
 		ofst << "It is a bush. It's flowering month is January." << endl;
@@ -88,13 +86,13 @@ void OutBush(ofstream& ofst, bush_plant& a) {
 		break;
 	}
 }
-int CountLettersBush(ofstream& ofst, bush_plant& a) {
-	int cnt = 0;
+int bush::CountLetters() {
 	string letters = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ";
-	for (int i = 0; i < a.name.length(); i++)
+	int cnt = 0;
+	for (int i = 0; i < name.length(); i++)
 	{
-		if (letters.find(a.name[i]) < letters.length())cnt++;
+		if (letters.find(name[i]) < letters.length())cnt++;
 	}
-	ofst << "count of consonants: " << cnt << endl;
 	return cnt;
 }
+;

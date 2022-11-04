@@ -1,21 +1,25 @@
 #pragma once
-//#include <iostream>
-//#include <fstream>
+#include <fstream>
 #include "Plant.h"
-
 using namespace std;
 
 struct Node {
-	plant* plnt = NULL;
+    Plant* plnt;
     Node* next;
     Node* prev;
+    Node(Plant* newplant);
 };
 
-struct Container {
-	int length = 0;
-	Node* Current = NULL;
-	Node* Head = NULL;
+class Container {
+    Node* Current;
+    Node* Head;
+    int length;
+public:
+    void In(ifstream& ifst);
+    void Out(ofstream& ofst);
+    void OutCountOfLetters(ofstream& ofst);
+    void Clear();
+    void Sort();
+    Container();
+    ~Container() { Clear(); }
 };
-void Clear(Container* c);
-void InCont(ifstream& ifst, Container* c);
-void OutCont(ofstream& ofst, Container* c);
