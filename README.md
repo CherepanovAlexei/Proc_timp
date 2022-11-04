@@ -1,2 +1,2 @@
-# Proc_timp
+# Timp_proc
 proc
