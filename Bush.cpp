@@ -1,52 +1,54 @@
 #include "Bush.h"
-void bush::In_Data(ifstream& ifst) {
-    ifst >> name;
+using namespace std;
+
+void InBush(ifstream& ifst, bush_plant& a) {
+	ifst >> a.name;
 	int t;
 	ifst >> t;
 	switch (t)
 	{
 	case 1:
-		blossom = January;
+		a.blossom = January;
 		break;
 	case 2:
-		blossom = February;
+		a.blossom = February;
 		break;
 	case 3:
-		blossom = March;
+		a.blossom = March;
 		break;
 	case 4:
-		blossom = April;
+		a.blossom = April;
 		break;
 	case 5:
-		blossom = May;
+		a.blossom = May;
 		break;
 	case 6:
-		blossom = June;
+		a.blossom = June;
 		break;
 	case 7:
-		blossom = July;
+		a.blossom = July;
 		break;
 	case 8:
-		blossom = August;
+		a.blossom = August;
 		break;
 	case 9:
-		blossom = September;
+		a.blossom = September;
 		break;
 	case 10:
-		blossom = October;
+		a.blossom = October;
 		break;
 	case 11:
-		blossom = November;
+		a.blossom = November;
 		break;
 	case 12:
-		blossom = December;
+		a.blossom = December;
 		break;
 	}
 }
 
-void bush::Out_Data(ofstream& ofst) {
-	ofst << "Name: " << name << endl;
-	switch (blossom)
+void OutBush(ofstream& ofst, bush_plant& a) {
+	ofst << "Name: " << a.name << endl;
+	switch (a.blossom)
 	{
 	case 0:
 		ofst << "It is a bush. It's flowering month is January." << endl;
@@ -86,13 +88,23 @@ void bush::Out_Data(ofstream& ofst) {
 		break;
 	}
 }
-int bush::CountLetters() {
-	string letters = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ";
+int CountLettersBush(ofstream& ofst, bush_plant& a) {
 	int cnt = 0;
-	for (int i = 0; i < name.length(); i++)
+	string letters = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ";
+	for (int i = 0; i < a.name.length(); i++)
 	{
-		if (letters.find(name[i]) < letters.length())cnt++;
+		if (letters.find(a.name[i]) < letters.length())cnt++;
+	}
+	ofst << "count of consonants: " << cnt << endl;
+	return cnt;
+}
+int countLetters(bush_plant& a)
+{
+	int cnt = 0;
+	string letters = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ";
+	for (int i = 0; i < a.name.length(); i++)
+	{
+		if (letters.find(a.name[i]) < letters.length())cnt++;
 	}
 	return cnt;
 }
-;

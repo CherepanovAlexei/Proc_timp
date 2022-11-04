@@ -1,15 +1,15 @@
 #pragma once
+#include <iostream>
 #include <fstream>
-
+#include "Tree.h"
+#include "Bush.h"
 using namespace std;
 
-class Plant {
-public:
-    static Plant* In(ifstream& ifst);
-    virtual void In_Data(ifstream& ifst) = 0;
-    virtual void Out_Data(ofstream& ofst) = 0;
-    virtual int CountLetters() = 0;
-    bool Compare(Plant& p);
-//protected:
-//    Plant() {};
+enum type { tree, bush };
+struct plant {
+	void* obj = NULL;
+	type key;
+
 };
+plant* InPlant(ifstream& ifst);
+int countLetters(plant& pt);

@@ -1,2 +1,2 @@
-# Timp_oop
-oop
+# Timp_proc
+proc
