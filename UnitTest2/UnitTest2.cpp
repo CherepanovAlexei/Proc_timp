@@ -132,7 +132,7 @@ namespace UnitTest2
 			}
 			TEST_METHOD(TestOut)
 			{
-				ofstream ofst("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/outTest.txt");
+				ofstream ofst("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/outTest.txt");
 				bool exp = true;
 				bool res = false;
 
@@ -150,7 +150,7 @@ namespace UnitTest2
 				OutFlower(ofst, *f);
 
 				ifstream ifst1("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/outTest.txt");
-				ifstream ifst2("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/expOutTest.txt");
+				ifstream ifst2("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/expOutTest.txt");
 				char c1, c2;
 				while (ifst1.get(c1) && ifst2.get(c2))
 				{
@@ -210,8 +210,8 @@ namespace UnitTest2
 
 				OutCont(ofst, &c);
 
-				ifstream ifst1("C:C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/outputTest.txt");
-				ifstream ifst2("C:C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/expOutputTest.txt");
+				ifstream ifst1("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/outputTest.txt");
+				ifstream ifst2("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/expOutputTest.txt");
 				char c1, c2;
 				while (ifst1.get(c1) && ifst2.get(c2))
 				{
@@ -408,7 +408,7 @@ namespace UnitTest2
 				OutTrees(ofst, &c);
 
 				ifstream ifst1("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/outTrees.txt");
-				ifstream ifst2("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/UnitTest2/expOutTrees.txt");
+				ifstream ifst2("C:/Users/Vanyu/OneDrive/Документы/GitHub/Proc_timp/expOutTrees.txt");
 				char c1, c2;
 				while (ifst1.get(c1) && ifst2.get(c2))
 				{

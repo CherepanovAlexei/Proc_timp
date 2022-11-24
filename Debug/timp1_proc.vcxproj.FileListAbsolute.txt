@@ -1,3 +1,1 @@
 C:\Users\Shele\Documents\GitHub\Timp_proc\Debug\timp1_proc.exe
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\Debug\timp1_proc.exe
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\Debug\timp1_proc.pdb

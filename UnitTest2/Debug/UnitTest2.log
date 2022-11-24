@@ -1,10 +1,4 @@
-﻿  pch.cpp
-  UnitTest2.cpp
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\Plant.cpp(58,21): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\UnitTest2\UnitTest2.cpp(40,19): warning C4129: V: неизвестная escape-последовательность
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\UnitTest2\UnitTest2.cpp(40,19): warning C4129: O: неизвестная escape-последовательность
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\UnitTest2\UnitTest2.cpp(40,19): warning C4129: :
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\UnitTest2\UnitTest2.cpp(40,19): warning C4129: G: неизвестная escape-последовательность
-C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\UnitTest2\UnitTest2.cpp(40,19): warning C4129: P: неизвестная escape-последовательность
-     Создается библиотека C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\Debug\UnitTest2.lib и объект C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\Debug\UnitTest2.exp
-  UnitTest2.vcxproj -> C:\Users\Vanyu\OneDrive\Документы\GitHub\Proc_timp\Debug\UnitTest2.dll
+﻿  UnitTest2.cpp
+C:\Users\Shele\Documents\GitHub\Timp_proc\Plant.cpp(58,21): warning C4018: <: несоответствие типов со знаком и без знака
+     Создается библиотека C:\Users\Shele\Documents\GitHub\Timp_proc\Debug\UnitTest2.lib и объект C:\Users\Shele\Documents\GitHub\Timp_proc\Debug\UnitTest2.exp
+  UnitTest2.vcxproj -> C:\Users\Shele\Documents\GitHub\Timp_proc\Debug\UnitTest2.dll
